@@ -26,6 +26,10 @@ public class MenuApp extends Application {
         Button b5 = Estilo.botao("5 - Os trinta e cinco camelos");
         Button b6 = Estilo.botao("6 - Calculadora de viagem");
         Button b7 = Estilo.botao("7 - Aluguel de carro");
+        Button b8 = Estilo.botao("8 - Loja de roupas");
+        Button b9 = Estilo.botao("9 - Caminho na floresta");
+        Button b10 = Estilo.botao("10 - Máscaras africanas");
+        Button b11 = Estilo.botao("11 - Desenhos de mangá");
         Button sair = Estilo.botao("0 - Sair");
 
         b1.setOnAction(e -> abrirMultiplo());
@@ -35,12 +39,16 @@ public class MenuApp extends Application {
         b5.setOnAction(e -> abrirCamelo());
         b6.setOnAction(e -> abrirViagem());
         b7.setOnAction(e -> abrirAluguel());
+        b8.setOnAction(e -> abrirLojaRoupas());
+        b9.setOnAction(e -> abrirFloresta());
+        b10.setOnAction(e -> abrirMascaras());
+        b11.setOnAction(e -> abrirManga());
         sair.setOnAction(e -> Platform.exit());
 
-        raiz.getChildren().addAll(titulo, b1, b2, b3, b4, b5, b6, b7, sair);
+        raiz.getChildren().addAll(titulo, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, sair);
 
         stage.setTitle("Menu Principal");
-        stage.setScene(new Scene(raiz, 320, 400));
+        stage.setScene(new Scene(raiz, 320, 560));
         stage.show();
     }
 
@@ -84,6 +92,30 @@ public class MenuApp extends Application {
         AluguelCarroView view = new AluguelCarroView();
         new AluguelCarroController(new AluguelCarroModel(), view);
         abrirJanela("Aluguel de carro", view.getRaiz(), 400, 300);
+    }
+
+    private void abrirLojaRoupas() {
+        LojaRoupasView view = new LojaRoupasView();
+        new LojaRoupasController(view);
+        abrirJanela("Imagem 1 - Loja de roupas", view.getRaiz(), 980, 480);
+    }
+
+    private void abrirFloresta() {
+        FlorestaView view = new FlorestaView();
+        new FlorestaController(view);
+        abrirJanela("Imagem 2 - Caminho na floresta", view.getRaiz(), 980, 480);
+    }
+
+    private void abrirMascaras() {
+        MascarasView view = new MascarasView();
+        new MascarasController(view);
+        abrirJanela("Imagem 3 - Máscaras africanas", view.getRaiz(), 980, 480);
+    }
+
+    private void abrirManga() {
+        MangaView view = new MangaView();
+        new MangaController(view);
+        abrirJanela("Imagem 4 - Desenhos de mangá", view.getRaiz(), 980, 480);
     }
 
     private void abrirJanela(String titulo, VBox raiz, int largura, int altura) {

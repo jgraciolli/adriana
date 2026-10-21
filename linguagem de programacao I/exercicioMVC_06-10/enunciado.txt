@@ -1,0 +1,22 @@
+Considerando os exercícios da tarefa anterior e o exemplo visto em aula, implemente a View e a Controller para cada classe Model. Em suma, adicione  GUI ( interface gráfica do usuário), fazendo adaptações quando necessárias.
+
+======================Tarefa anterior ========================
+	1. Considerando as classes desenvolvidas em "Exercícios Java", dentro de um mesmo projeto, modifique-as de forma que nenhum dos métodos nelas implementados chame-se main. Em seguida, implemente uma 	classe que contenha o método main e, que por ela, seja possível exibir um menu para que o usuário escolha de qual exercício Java deseja visualizar a solução. Exemplo de menu:
+
+	Qual você deseja executar?
+	1-Verificação de Múltiplo
+	2-Sistema de Login Simplificado
+	3-Compra com desconto
+	4-Temperatura
+	5-Os trinta e cinco camelos
+	6-Calculadora de viagem
+	7-Aluguel de carro
+
+        2.Observe as imagens a seguir
+	**AS 4 IMAGENS ESTAO SALVAS NA PASTA '/imagens/'**
+
+       	Para cada uma dessas imagens, faça o que se pede nos itens seguintes. 
+
+       	a) Faça os diagramas UML de três classes, cujos possíveis objetos estão exibidos nas imagens. Cada classe deve ter três atributos e três métodos, sem contar os métodos de acesso. 
+      	b) Implemente as classes definidas no item a) em Java. 
+      	c) Construa uma classe principal, que deve conter o método main para instanciação de objetos e testes das classes codificadas no item b)
